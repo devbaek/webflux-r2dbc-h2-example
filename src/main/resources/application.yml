@@ -1,0 +1,14 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem://localhost/~/webflux
+    username: sa
+    password:
+    pool:
+      initial-size: 100
+      max-size: 500
+      max-idle-time: 30m
+      validation-query: SELECT 1
+
+# bind parameter logging
+logging.level.org.hibernate.type.descriptor.sql: trace
+logging.level.org.springframework.data.r2dbc: DEBUG
